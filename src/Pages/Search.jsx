@@ -1,9 +1,10 @@
 import { Heart, Star } from "@phosphor-icons/react";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const Search = ({ keyword }) => {
+const Search = () => {
   const [Manga, setManga] = useState([]);
+  const { keyword } = useParams();
   const fetchData = async () => {
     const response = await fetch(`https://api.jikan.moe/v4/manga?q=${keyword}`);
     const data = await response.json();

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Card = () => {
   const [Manga, setManga] = useState([]);
   const fetchData = async () => {
-    const response = await fetch(`https://api.jikan.moe/v4/manga`);
+    const response = await fetch("https://api.jikan.moe/v4/manga");
     const data = await response.json();
     setManga(data.data);
   };

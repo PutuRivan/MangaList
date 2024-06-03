@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 const Details = () => {
   const { id } = useParams();
-  const [Manga, setManga] = useState([]);
+  const [Manga, setManga] = useState(null);
 
   const fetchData = async () => {
     const response = await fetch(`https://api.jikan.moe/v4/manga/${id}`);
@@ -17,31 +17,31 @@ const Details = () => {
 
   console.log(Manga);
   return (
-    <div className="mt-5 flex flex-row w-full gap-5">
-      {Manga.map((item) => (
-        <div>
-          <div>
-            <img src={item.images.webp.image_url} alt="" />
+    <div className="m-5 mt-10">
+      {Manga ? (
+        <div className="flex flex-row gap-20 justify-center">
+          <div className="">
+            <img src={Manga.images.webp.image_url} alt="" />
             <div className="flex flex-col text-white text-l mt-5">
               <div className="flex flex-row">
                 <p>Score : </p>
-                <p>Popularity</p>
+                <p>{Manga.score}</p>
               </div>
               <div className="flex flex-row">
                 <p>Rank : </p>
-                <p>Popularity</p>
+                <p>{Manga.rank}</p>
               </div>
               <div className="flex flex-row">
                 <p>Status : </p>
-                <p>Popularity</p>
+                <p>{Manga.status}</p>
               </div>
               <div className="flex flex-row">
                 <p>Chapter : </p>
-                <p>Popularity</p>
+                <p>{Manga.chapters}</p>
               </div>
               <div className="flex flex-row">
                 <p>Popularity : </p>
-                <p>Popularity</p>
+                <p>{Manga.popularity}</p>
               </div>
             </div>
           </div>
@@ -53,17 +53,15 @@ const Details = () => {
             </div>
             <p className="text-xl text-white">Sinopsis :</p>
             <p className="text-l text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus officiis, blanditiis assumenda unde ratione sint
-              quibusdam perspiciatis deleniti eum praesentium eos vel magni
-              necessitatibus fugit molestiae facilis corporis reprehenderit
-              iusto nihil. Iusto omnis consequatur officia necessitatibus natus,
-              consectetur distinctio libero. Ea vero deleniti, accusamus
-              consequatur eius modi iure sunt sapiente?
+              {Manga.synopsis}
             </p>
           </div>
         </div>
-      ))}
+      ) : (
+        <div className="flex justify-center items-center">
+          <h1>LOADING</h1>
+        </div>
+      )}
     </div>
   );
 };

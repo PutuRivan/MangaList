@@ -10,13 +10,14 @@ const Navbar = () => {
     if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
       navigate(`/search/${searchKeyword}`);
+      setSearchKeyword("");
     }
   };
 
   return (
-    <nav className="bg-red-500 flex flex-col lg:flex-row md:flex-row lg:justify-between md:justify-between items-center p-5 gap-2 ">
+    <nav className="bg-[#ffffff1a] flex flex-col lg:flex-row md:flex-row lg:justify-between md:justify-between items-center p-5 gap-2 ">
       <Link to="/">
-        <h1 className="text-2xl font-bold">Manga</h1>
+        <h1 className="text-2xl font-bold text-white">Manga</h1>
       </Link>
       <div className="relative">
         <input
