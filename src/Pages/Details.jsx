@@ -15,12 +15,14 @@ const Details = () => {
     fetchData();
   }, [id]);
 
-  console.log(Manga);
   return (
     <div className="m-5 mt-10">
       {Manga ? (
-        <div className="flex flex-row gap-20 justify-center">
-          <div className="">
+        <div className="flex lg:flex-row flex-col lg:gap-20 gap-5 justify-center lg:items-start items-center ">
+          <div>
+            <h1 className="text-2xl font-bold text-white text-center">
+              {Manga.title}
+            </h1>
             <img src={Manga.images.webp.image_url} alt="" />
             <div className="flex flex-col text-white text-l mt-5">
               <div className="flex flex-row">
@@ -45,16 +47,9 @@ const Details = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
-            <div>
-              <h1 className="text-2xl font-bold text-white text-center">
-                JUDUL
-              </h1>
-            </div>
+          <div className="lg:w-1/2">
             <p className="text-xl text-white">Sinopsis :</p>
-            <p className="text-l text-white">
-              {Manga.synopsis}
-            </p>
+            <p className="text-l text-white">{Manga.synopsis}</p>
           </div>
         </div>
       ) : (
