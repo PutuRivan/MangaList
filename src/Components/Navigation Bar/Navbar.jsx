@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#ffffff1a] flex flex-col lg:flex-row md:flex-row lg:justify-between md:justify-between items-center p-5 gap-2 ">
       <Link to="/">
-        <h1 className="text-2xl font-bold text-white">Manga</h1>
+        <h1 className="text-4xl font-bold text-white">Manga List</h1>
       </Link>
       <div className="relative">
         <input

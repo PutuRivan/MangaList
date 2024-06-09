@@ -11,6 +11,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Manga/:id" element={<Details  />} />
           <Route path="/Search/:keyword" element={<Search />} />
+          {/* <Route path="/TopManga" element={<TopManga/>}/> */}
         </Routes>
     </>
   );

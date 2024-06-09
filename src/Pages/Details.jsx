@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import DetailSkeleton from "../Components/Skeleton/DetailSkeleton";
 
 const Details = () => {
   const { id } = useParams();
@@ -53,9 +54,7 @@ const Details = () => {
           </div>
         </div>
       ) : (
-        <div className="flex justify-center items-center">
-          <h1>LOADING</h1>
-        </div>
+        <DetailSkeleton />
       )}
     </div>
   );
