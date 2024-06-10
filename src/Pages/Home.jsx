@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <>
       <section>
-        <Judul Title="Top Manga"  />
-        <Card resource={`top/manga`} query={"limit=20"} />
+        <Judul Title="Top Manga" linkHref="/TopManga"/>
+        <Card resource={`manga`} query={"limit=10"} />
       </section>
     </>
   );

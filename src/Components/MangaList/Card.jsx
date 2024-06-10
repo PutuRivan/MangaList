@@ -13,10 +13,11 @@ const Card = ({resource, query}) => {
     setLoading(false);
     setManga(data);
   };
-
+  
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [query]);
+
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 lg:m-5 ">

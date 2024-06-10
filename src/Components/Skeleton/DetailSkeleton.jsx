@@ -16,7 +16,7 @@ const DetailSkeleton = () => {
             </div>
             <div className="flex flex-row mt-2">
               <div className="h-6 bg-gray-300 rounded-md w-12 mx-2"></div>
-              <div className="h-6 bg-gray-3000 rounded-md w-12 mx-2"></div>
+              <div className="h-6 bg-gray-300 rounded-md w-12 mx-2"></div>
             </div>
             <div className="flex flex-row mt-2">
               <div className="h-6 bg-gray-300 rounded-md w-24 mx-2"></div>

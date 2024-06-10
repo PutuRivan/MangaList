@@ -17,38 +17,42 @@ const Details = () => {
   }, [id]);
 
   return (
-    <div className="m-5 mt-10">
+    <div className="m-5 mt-10 lg:mr-20">
       {Manga ? (
-        <div className="flex lg:flex-row flex-col lg:gap-20 gap-5 justify-center lg:items-start items-center ">
-          <div>
-            <h1 className="text-2xl font-bold text-white text-center">
-              {Manga.title}
-            </h1>
-            <img src={Manga.images.webp.image_url} alt="" />
-            <div className="flex flex-col text-white text-l mt-5">
-              <div className="flex flex-row">
+        <div className="flex lg:flex-row flex-col lg:gap-20 gap-5 justify-center lg:items-start items-center">
+          <div className="lg:w-1/2 flex-col justify-center">
+            <div className="mb-5">
+              <h1 className="text-2xl font-bold text-white text-center">
+                {Manga.title}
+              </h1>
+            </div>
+            <div className="flex justify-center">
+              <img src={Manga.images.webp.image_url} alt="" />
+            </div>
+            <div className="flex flex-col text-white text-l mt-5 justify-center">
+              <div className="flex flex-row justify-center">
                 <p>Score : </p>
                 <p>{Manga.score}</p>
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-center">
                 <p>Rank : </p>
                 <p>{Manga.rank}</p>
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-center">
                 <p>Status : </p>
                 <p>{Manga.status}</p>
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-center">
                 <p>Chapter : </p>
                 <p>{Manga.chapters}</p>
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-center">
                 <p>Popularity : </p>
                 <p>{Manga.popularity}</p>
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 mt-10">
             <p className="text-xl text-white">Sinopsis :</p>
             <p className="text-l text-white">{Manga.synopsis}</p>
           </div>

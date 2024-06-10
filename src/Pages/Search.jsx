@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {  useParams } from "react-router-dom";
 import Card from "../Components/MangaList/Card";
 import Judul from "../Components/MangaList/Header";
@@ -6,6 +6,7 @@ import Judul from "../Components/MangaList/Header";
 const Search = () => {
   const { keyword } = useParams();
   const decodedKeyword = decodeURI(keyword);
+
 
   return (
     <>
