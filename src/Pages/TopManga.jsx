@@ -41,7 +41,7 @@ const TopManga = () => {
 
   return (
     <>
-      <div className="flex justify-center text-white mt-5">
+      <div className="flex justify-center text-color-white mt-5">
         <h1 className="text-2xl">TOP MANGA #{page}</h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 lg:m-5 ">
@@ -57,7 +57,7 @@ const TopManga = () => {
             <div className="card">
               <img src={item.images.webp.image_url} alt="" />
               <div className="info mx-10">
-                <h1 className="text-center text-lg font-bold text-white">
+                <h1 className="text-center text-lg font-bold text-color-white">
                   {item.title}
                 </h1>
                 <div className="flex justify-between gap-3">
