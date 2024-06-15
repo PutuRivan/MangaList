@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <section>
-        <Judul Title="Top Manga" linkHref="/TopManga"/>
+        <Judul Title="Top Manga" linkHref="/TopManga" linkTitle="See More"/>
         <Card resource={`manga`} query={"limit=10"} />
       </section>
     </>
