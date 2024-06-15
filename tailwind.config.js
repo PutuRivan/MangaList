@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {},
+    colors:{
+      color:{
+        'white' : '#FDFFFF',
+        'CelestianBlue' : '#20A4F3',
+        'Zaffre' : '#0D21A1',
+        'EerieBlack' : '#242423',
+        'Jet' : '#333533'
+      }
+    }
   },
   plugins: [],
 }
