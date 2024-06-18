@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import Search from "./Pages/Search";
 import Details from "./Pages/Details";
 import TopManga from "./Pages/TopManga";
+import Manga from "./Pages/Manga";
 function App() {
   const navigate = useNavigate();
   
@@ -13,6 +14,7 @@ function App() {
           <Route path="/Manga/:id" element={<Details  />} />
           <Route path="/Search/:keyword" element={<Search />} />
           <Route path="/TopManga" element={<TopManga/>}/>
+          <Route path="/Manga" element={<Manga/>}/>
         </Routes>
     </>
   );
